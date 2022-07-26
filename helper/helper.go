@@ -42,3 +42,9 @@ func APIValidation(err error) gin.H {
 
 	return errorMessage
 }
+
+func APIError(err error) gin.H {
+	errorMessage := gin.H{"errors": err.Error()}
+
+	return errorMessage
+}
